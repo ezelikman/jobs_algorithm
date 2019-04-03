@@ -93,7 +93,7 @@ def get_data(filename="jobs.csv"):
                 # Account for jobs with special needs
                 human["Lifter"] = [row[col] == "Yes" for col in row if lifter_col in col][0]
                 if not human["Lifter"]:
-                    job_id = weekly_precise_names.index("Brew Crew (Varies)")
+                    job_id = weekly_precise_names.index("Job H (Varies)")
                     rank = human["Weekly_Rankings"][weekly_precise_index[job_id][0]]
                     human["Weekly_Rankings"] = reduce_past(human["Weekly_Rankings"], rank, 1)
                     human["Weekly_Rankings"][weekly_precise_index[job_id][0]] = False
